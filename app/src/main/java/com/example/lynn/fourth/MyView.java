@@ -41,7 +41,7 @@ public class MyView extends RelativeLayout {
 
         String[] temp = {"Largest","2nd Largest","3rd Largest","Smallest"};
 
-        startX = space + 200;
+        startX = space + 190;
 
         for (int counter=0;counter<labels.length;counter++) {
             labels[counter] = new TextView(context);
