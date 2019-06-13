@@ -15,6 +15,8 @@ public class MyListener implements View.OnTouchListener {
     public boolean onTouch(View view, MotionEvent motionEvent) {
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)view.getLayoutParams();
 
+        message.setText("top margin is " + params.topMargin);
+
         if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
             offsetX = (int)(motionEvent.getRawX() - params.leftMargin);
             offsetY = (int)(motionEvent.getRawY() - params.topMargin);
@@ -26,9 +28,9 @@ public class MyListener implements View.OnTouchListener {
 
             Rect rectangle = new Rect(params.leftMargin,params.topMargin,params.leftMargin + view.getWidth(),params.topMargin + view.getHeight());
 
-            message.setText(String.valueOf(rectangles[0]) + " " + String.valueOf(rectangle));
+//            message.setText(String.valueOf(rectangles[0]) + " " + String.valueOf(rectangle));
 
-            message.setText("offsetY is " + offsetY);
+//            message.setText("offsetY is " + offsetY);
 
             if (rectangles[0].contains(rectangle))
                 message.setText("Contains");
