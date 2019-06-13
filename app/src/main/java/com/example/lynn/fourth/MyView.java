@@ -41,7 +41,7 @@ public class MyView extends RelativeLayout {
 
         invalidate();
 
-        state = new StateView(context,200,200);
+        state = new StateView(context,widthOfRectangle - 10,390);
 
         state.getState();
 
