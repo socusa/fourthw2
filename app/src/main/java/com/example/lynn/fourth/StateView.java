@@ -87,7 +87,7 @@ public class StateView extends RelativeLayout {
 
         name.setText(map.get(id));
 
-        name.setTextSize(maxTextSize(map.get(id),name,width - 20));
+        name.setTextSize(maxTextSize(map.get(id),name,width - 50));
     }
 
 
