@@ -1,6 +1,7 @@
 package com.example.lynn.fourth;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,6 +39,8 @@ public class StateView extends RelativeLayout {
         layoutParams.addRule(RelativeLayout.BELOW,state.getId());
 
         name.setLayoutParams(layoutParams);
+
+        name.setTypeface(null,Typeface.BOLD);
 
         addView(state);
         addView(name);
