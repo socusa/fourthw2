@@ -41,11 +41,11 @@ public class MyView extends RelativeLayout {
 
         invalidate();
 
-        state = new StateView(context,widthOfRectangle - 50,300);
+        state = new StateView(context,widthOfRectangle - 100,300);
 
         state.getState();
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle-50,300);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle-100,300);
 
         state.setLayoutParams(layoutParams);
 
