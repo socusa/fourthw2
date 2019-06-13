@@ -71,6 +71,8 @@ public class MyView extends RelativeLayout {
 
         paint.setColor(0xFF000000);
 
+        paint.setStyle(Paint.Style.STROKE);
+
         for (int counter=0;counter<rectangles.length;counter++)
             canvas.drawRect(rectangles[counter],paint);
     }
