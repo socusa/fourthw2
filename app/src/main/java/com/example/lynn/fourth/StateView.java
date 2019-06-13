@@ -1,6 +1,8 @@
 package com.example.lynn.fourth;
 
 import android.content.Context;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
@@ -16,11 +18,34 @@ public class StateView extends RelativeLayout {
     private ImageView state;
     private TextView name;
     private Context context;
+    private int width;
+
+    private int maxTextSize(String text,
+                            TextView view,
+                            int length) {
+        Rect bounds = new Rect();
+
+        int textSize = 10;
+
+        while (bounds.width() < length) {
+            Paint paint = view.getPaint();
+
+            view.setTextSize(textSize);
+
+            paint.getTextBounds(text,0,text.length(),bounds);
+
+            textSize++;
+        }
+
+        return(textSize);
+    }
 
     public StateView(Context context,
                      int width,
                      int height) {
         super(context);
+
+        this.width = width;
 
         this.context = context;
 
@@ -42,8 +67,6 @@ public class StateView extends RelativeLayout {
 
         name.setTypeface(null,Typeface.BOLD);
 
-        name.setTextSize(25);
-
         addView(state);
         addView(name);
 
@@ -63,6 +86,8 @@ public class StateView extends RelativeLayout {
         state.setImageDrawable(ContextCompat.getDrawable(context,id));
 
         name.setText(map.get(id));
+
+        name.setTextSize(maxTextSize(map.get(id),name,width));
     }
 
 
