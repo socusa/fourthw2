@@ -51,6 +51,8 @@ public class MyView extends RelativeLayout {
 
         state.setY(1000);
 
+        state.setOnTouchListener(listener);
+
         addView(state);
 
         message = new TextView(context);
