@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     public static int height;
     public static SQLiteDatabase database;
     public static MyDatabaseHelper helper;
-    public static ImageView state;
+    public static StateView state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
