@@ -39,6 +39,8 @@ public class StateView extends RelativeLayout {
 
         name.setLayoutParams(layoutParams);
 
+        name.setTextSize(40);
+
         addView(state);
         addView(name);
     }
