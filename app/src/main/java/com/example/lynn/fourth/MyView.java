@@ -47,9 +47,9 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle-100,300);
 
-        state.setLayoutParams(layoutParams);
+        layoutParams.topMargin = 1000;
 
-        state.setY(1000);
+        state.setLayoutParams(layoutParams);
 
         state.setOnTouchListener(listener);
 
