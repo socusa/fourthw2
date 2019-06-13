@@ -53,13 +53,13 @@ public class StateView extends RelativeLayout {
 
         state.setId(View.generateViewId());
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(width,3*height/4);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(width,2*height/3);
 
         state.setLayoutParams(layoutParams);
 
         name = new TextView(context);
 
-        layoutParams = new RelativeLayout.LayoutParams(width,height/4);
+        layoutParams = new RelativeLayout.LayoutParams(width,height/3);
 
         layoutParams.addRule(RelativeLayout.BELOW,state.getId());
 
