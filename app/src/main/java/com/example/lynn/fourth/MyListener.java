@@ -28,7 +28,7 @@ public class MyListener implements View.OnTouchListener {
 
             message.setText(String.valueOf(rectangles[0]) + " " + String.valueOf(rectangle));
 
-            message.setText("getrawy is " + motionEvent.getRawY());
+            message.setText("offsetY is " + offsetY);
 
             if (rectangles[0].contains(rectangle))
                 message.setText("Contains");
