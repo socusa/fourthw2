@@ -55,8 +55,6 @@ public class MyView extends RelativeLayout {
 
         message = new TextView(context);
 
-        addView(message);
-
         layoutParams = new RelativeLayout.LayoutParams(400,200);
 
         message.setX(100);
