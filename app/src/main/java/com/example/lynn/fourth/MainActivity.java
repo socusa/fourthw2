@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView message;
     public static int widthOfRectangle;
     public static MyListener listener = new MyListener();
+    public static TextView[] labels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

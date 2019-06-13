@@ -37,6 +37,29 @@ public class MyView extends RelativeLayout {
             startX += widthOfRectangle + space;
         }
 
+        labels = new TextView[4];
+
+        String[] temp = {"Largest","2nd Largest","3rd Largest","Smallest"};
+
+        startX = space;
+
+        for (int counter=0;counter<labels.length;counter++) {
+            labels[counter] = new TextView(context);
+
+            labels[counter].setText(temp[counter]);
+
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle, 100);
+
+            layoutParams.leftMargin = startX;
+            layoutParams.topMargin = 0;
+
+            labels[counter].setLayoutParams(layoutParams);
+
+            addView(labels[counter]);
+
+            startX += widthOfRectangle + space;
+        }
+
         setWillNotDraw(false);
 
         invalidate();
