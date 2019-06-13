@@ -28,6 +28,8 @@ public class MyListener implements View.OnTouchListener {
 
             message.setText(String.valueOf(rectangles[0]) + " " + String.valueOf(rectangle));
 
+            message.setText("top margin is " + params.topMargin);
+
             if (rectangles[0].contains(rectangle))
                 message.setText("Contains");
 
