@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static MyDatabaseHelper helper;
     public static StateView state;
     public static TextView message;
+    public static int widthOfRectangle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

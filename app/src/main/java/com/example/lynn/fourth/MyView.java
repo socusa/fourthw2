@@ -23,7 +23,7 @@ public class MyView extends RelativeLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        int widthOfRectangle = (int)((width - 0.05*width)/4);
+        widthOfRectangle = (int)((width - 0.05*width)/4);
 
         rectangles = new Rect[4];
 
@@ -45,7 +45,7 @@ public class MyView extends RelativeLayout {
 
         state.getState();
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle-10,390);
 
         state.setLayoutParams(layoutParams);
 
