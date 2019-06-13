@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import static com.example.lynn.fourth.MainActivity.*;
 
@@ -51,6 +52,18 @@ public class MyView extends RelativeLayout {
         state.setY(1000);
 
         addView(state);
+
+        message = new TextView(context);
+
+        addView(message);
+
+        layoutParams = new RelativeLayout.LayoutParams(400,200);
+
+        message.setX(100);
+
+        message.setY(700);
+
+        addView(message);
     }
 
     public void onDraw(Canvas canvas) {

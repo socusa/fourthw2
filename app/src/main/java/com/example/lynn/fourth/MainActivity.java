@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public static MyView myView;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static SQLiteDatabase database;
     public static MyDatabaseHelper helper;
     public static StateView state;
+    public static TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
