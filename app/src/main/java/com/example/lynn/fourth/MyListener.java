@@ -26,7 +26,7 @@ public class MyListener implements View.OnTouchListener {
 
             Rect rectangle = new Rect(params.leftMargin,params.topMargin,params.leftMargin + view.getWidth(),params.topMargin + view.getHeight());
 
-            message.setText(String.valueOf(rectangle));
+            message.setText(String.valueOf(rectangles[0]) + " " + String.valueOf(rectangle));
 
             if (rectangles[0].contains(rectangle))
                 message.setText("Contains");
