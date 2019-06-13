@@ -41,6 +41,8 @@ public class StateView extends RelativeLayout {
 
         addView(state);
         addView(name);
+
+        setBackgroundColor(0xFFFF0000);
     }
 
     public void getState() {
