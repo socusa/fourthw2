@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,7 +42,7 @@ public class MyView extends RelativeLayout {
 
         String[] temp = {"Largest","2nd Largest","3rd Largest","Smallest"};
 
-        startX = space + 190;
+        startX = space + 180;
 
         for (int counter=0;counter<labels.length;counter++) {
             labels[counter] = new TextView(context);
@@ -56,6 +57,8 @@ public class MyView extends RelativeLayout {
             layoutParams.topMargin = 0;
 
             labels[counter].setLayoutParams(layoutParams);
+
+            labels[counter].setTypeface(null, Typeface.BOLD);
 
             addView(labels[counter]);
 
