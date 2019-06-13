@@ -5,6 +5,7 @@ import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     public static MyView myView;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     public static int height;
     public static SQLiteDatabase database;
     public static MyDatabaseHelper helper;
+    public static ImageView state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

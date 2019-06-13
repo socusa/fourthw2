@@ -7,6 +7,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import static com.example.lynn.fourth.MainActivity.*;
@@ -38,6 +39,14 @@ public class MyView extends RelativeLayout {
         setWillNotDraw(false);
 
         invalidate();
+
+        state = new ImageView(context);
+
+        state.setImageDrawable(getResources().getDrawable(R.drawable.alabama));
+
+        state.setY(1000);
+
+        addView(state);
     }
 
     public void onDraw(Canvas canvas) {
