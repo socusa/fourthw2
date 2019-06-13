@@ -51,7 +51,7 @@ public class StateView extends RelativeLayout {
         for (int code : map.keySet())
             list.add(code);
 
-        int id = (int)(list.size()*Math.random());
+        int id = list.get((int)(list.size()*Math.random()));
 
         state.setImageDrawable(ContextCompat.getDrawable(context,id));
 
