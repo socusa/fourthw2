@@ -44,6 +44,10 @@ public class MyView extends RelativeLayout {
 
         state.setImageDrawable(getResources().getDrawable(R.drawable.alabama));
 
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+
+        state.setLayoutParams(layoutParams);
+
         state.setY(1000);
 
         addView(state);
