@@ -43,11 +43,10 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view == start) {
-            int childCount = myView.getChildCount();
+            for (StateView temp : views)
+                myView.removeView(temp);
 
-            for (int counter = 0; counter < childCount; counter++)
-                if (myView.getChildAt(counter) instanceof StateView)
-                    myView.removeView(myView.getChildAt(counter));
+            views.clear();
 
             StateView[] states = new StateView[4];
 
@@ -62,9 +61,12 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
                 layoutParams.topMargin = 950;
 
                 states[counter].setLayoutParams(layoutParams);
+
+                views.add(states[counter]);
             }
 
-            myView.setStates(states);
+            for (StateView temp : views)
+                myView.addView(temp);
         } else if (view == test) {
             myView.removeViews();
         }

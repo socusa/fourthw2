@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     public static MyView myView;
     public static Button button;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static Button start;
     public static StateView[] states;
     public static Button test;
+    public static List<StateView> views;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         helper = new MyDatabaseHelper(this);
 
         database = helper.getReadableDatabase();
+
+        views = new ArrayList<>();
 
         setContentView(myView = new MyView(this));
     }
