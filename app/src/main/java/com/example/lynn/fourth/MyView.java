@@ -69,23 +69,9 @@ public class MyView extends RelativeLayout {
 
         invalidate();
 
-        state = new StateView(context,widthOfRectangle - 100,300);
-
-        state.getState();
-
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle-100,300);
-
-        layoutParams.topMargin = 1000;
-
-        state.setLayoutParams(layoutParams);
-
-        state.setOnTouchListener(listener);
-
-        addView(state);
-
         message = new TextView(context);
 
-        layoutParams = new RelativeLayout.LayoutParams(400,200);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(400,200);
 
         message.setX(100);
 
