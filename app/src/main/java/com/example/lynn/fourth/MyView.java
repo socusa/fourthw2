@@ -79,7 +79,7 @@ public class MyView extends RelativeLayout {
 
         message.setLayoutParams(layoutParams);
 
-        message.setBackgroundColor(0xFF8F0000);
+        message.setText("Hello");
 
         addView(message);
 
