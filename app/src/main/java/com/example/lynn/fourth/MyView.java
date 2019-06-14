@@ -122,7 +122,7 @@ public class MyView extends RelativeLayout {
             }
         }
 
-        states = null;
+        this.states = null;
 
         this.states = states;
 
