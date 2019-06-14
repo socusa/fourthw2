@@ -121,8 +121,6 @@ public class MyView extends RelativeLayout {
                 removeView(states[counter]);
         }
 
-        invalidate();
-
         this.states = states;
 
         for (StateView stateView : states)
