@@ -101,12 +101,12 @@ public class MyView extends RelativeLayout {
                 removeView(states[counter]);
         }
 
+        invalidate();
+
         this.states = states;
 
         for (StateView stateView : states)
             addView(stateView);
-
-        invalidate();
     }
 
     public void onDraw(Canvas canvas) {
