@@ -19,6 +19,7 @@ public class StateView extends RelativeLayout {
     private TextView name;
     private Context context;
     private int width;
+    private int id;
 
     private int maxTextSize(String text,
                             TextView view,
@@ -71,6 +72,10 @@ public class StateView extends RelativeLayout {
         addView(name);
     }
 
+    public int getId() {
+        return(id);
+    }
+
     public void getState() {
         Map<Integer,String> map = State.getReverseMap(this);
 
@@ -79,7 +84,7 @@ public class StateView extends RelativeLayout {
         for (int code : map.keySet())
             list.add(code);
 
-        int id = list.get((int)(list.size()*Math.random()));
+        id = list.get((int)(list.size()*Math.random()));
 
         state.setImageDrawable(ContextCompat.getDrawable(context,id));
 
@@ -87,6 +92,5 @@ public class StateView extends RelativeLayout {
 
         name.setTextSize(maxTextSize(map.get(id),name,width - 50));
     }
-
 
 }

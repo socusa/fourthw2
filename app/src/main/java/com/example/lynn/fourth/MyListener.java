@@ -5,6 +5,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import static com.example.lynn.fourth.MainActivity.*;
 
 public class MyListener implements View.OnTouchListener,View.OnClickListener {
@@ -14,8 +17,6 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)view.getLayoutParams();
-
-        message.setText("top margin is " + params.topMargin);
 
         if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
             offsetX = (int)(motionEvent.getRawX() - params.leftMargin);
@@ -36,6 +37,8 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
                 message.setText("Contains");
 
         }
+
+
 
         return (true);
     }
@@ -66,6 +69,13 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
 
                 views.add(states[counter]);
             }
+
+            viewsOrderedByArea = new ArrayList<>();
+
+            for (StateView temp : views)
+                viewsOrderedByArea.add(temp);
+
+            Collections.sort(viewsOrderedByArea,new StateComparator());
 
             for (StateView temp : views)
                 myView.addView(temp);

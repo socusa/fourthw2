@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public static StateView[] states;
     public static Button test;
     public static List<StateView> views;
+    public static List<StateView> viewsOrderedByArea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

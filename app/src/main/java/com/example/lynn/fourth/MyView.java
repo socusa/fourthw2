@@ -72,11 +72,14 @@ public class MyView extends RelativeLayout {
 
         message = new TextView(context);
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(400,200);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(400,400);
 
-        message.setX(100);
+        layoutParams.leftMargin = 1000;
+        layoutParams.topMargin = 700;
 
-        message.setY(700);
+        message.setLayoutParams(layoutParams);
+
+        message.setBackgroundColor(0xFF8F0000);
 
         addView(message);
 
