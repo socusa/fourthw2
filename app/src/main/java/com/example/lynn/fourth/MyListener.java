@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 import static com.example.lynn.fourth.MainActivity.*;
 
-public class MyListener implements View.OnTouchListener {
+public class MyListener implements View.OnTouchListener,View.OnClickListener {
     private int offsetX;
     private int offsetY;
 
@@ -38,5 +38,27 @@ public class MyListener implements View.OnTouchListener {
         }
 
         return (true);
+    }
+
+    @Override
+    public void onClick(View view) {
+        StateView[] states = new StateView[4];
+
+        for (int counter=0;counter<states.length;counter++) {
+            states[counter] = new StateView(view.getContext(),widthOfRectangle-100,300);
+
+            states[counter].getState();
+
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle - 100,300);
+
+            layoutParams.leftMargin = 50 + counter*widthOfRectangle;
+            layoutParams.topMargin = 950;
+
+            states[counter].setLayoutParams(layoutParams);
+
+            myView.addView(states[counter]);
+        }
+
+
     }
 }

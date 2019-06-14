@@ -92,6 +92,20 @@ public class MyView extends RelativeLayout {
         message.setY(700);
 
         addView(message);
+
+        start = new Button(context);
+
+        start.setText("Start");
+
+        start.setOnClickListener(listener);
+
+        layoutParams = new RelativeLayout.LayoutParams(200,100);
+
+        layoutParams.topMargin = 600;
+
+        start.setLayoutParams(layoutParams);
+
+        addView(start);
     }
 
     public void onDraw(Canvas canvas) {

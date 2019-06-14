@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public static int widthOfRectangle;
     public static MyListener listener = new MyListener();
     public static TextView[] labels;
+    public static Button start;
+    public static StateView[] states;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
