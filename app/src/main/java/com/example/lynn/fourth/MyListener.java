@@ -62,6 +62,8 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
 
                 states[counter].setLayoutParams(layoutParams);
 
+                states[counter].setOnTouchListener(listener);
+
                 views.add(states[counter]);
             }
 
