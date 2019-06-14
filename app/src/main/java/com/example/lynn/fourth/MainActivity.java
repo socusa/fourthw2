@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView[] labels;
     public static Button start;
     public static StateView[] states;
+    public static Button test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

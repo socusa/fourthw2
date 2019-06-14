@@ -93,6 +93,26 @@ public class MyView extends RelativeLayout {
         start.setLayoutParams(layoutParams);
 
         addView(start);
+
+        test = new Button(context);
+
+        test.setOnClickListener(listener);
+
+        layoutParams = new RelativeLayout.LayoutParams(200,100);
+
+        layoutParams.leftMargin = 500;
+        layoutParams.topMargin = 600;
+
+        test.setLayoutParams(layoutParams);
+
+        addView(test);
+    }
+
+    public void removeViews() {
+        if (this.states != null) {
+            for (int counter = 0; counter < states.length; counter++)
+                removeView(states[counter]);
+        }
     }
 
     public void setStates(StateView[] states) {

@@ -42,27 +42,31 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        int childCount = myView.getChildCount();
+        if (view == start) {
+            int childCount = myView.getChildCount();
 
-        for (int counter=0;counter<childCount;counter++)
-            if (myView.getChildAt(counter) instanceof StateView)
-                myView.removeView(myView.getChildAt(counter));
+            for (int counter = 0; counter < childCount; counter++)
+                if (myView.getChildAt(counter) instanceof StateView)
+                    myView.removeView(myView.getChildAt(counter));
 
-        StateView[] states = new StateView[4];
+            StateView[] states = new StateView[4];
 
-        for (int counter=0;counter<states.length;counter++) {
-            states[counter] = new StateView(view.getContext(),widthOfRectangle-100,300);
+            for (int counter = 0; counter < states.length; counter++) {
+                states[counter] = new StateView(view.getContext(), widthOfRectangle - 100, 300);
 
-            states[counter].getState();
+                states[counter].getState();
 
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle - 100,300);
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(widthOfRectangle - 100, 300);
 
-            layoutParams.leftMargin = 50 + counter*widthOfRectangle;
-            layoutParams.topMargin = 950;
+                layoutParams.leftMargin = 50 + counter * widthOfRectangle;
+                layoutParams.topMargin = 950;
 
-            states[counter].setLayoutParams(layoutParams);
+                states[counter].setLayoutParams(layoutParams);
+            }
+
+            myView.setStates(states);
+        } else if (view == test) {
+            myView.removeViews();
         }
-
-        myView.setStates(states);
     }
 }
