@@ -61,10 +61,8 @@ public class MyListener implements View.OnTouchListener,View.OnClickListener {
             layoutParams.topMargin = 950;
 
             states[counter].setLayoutParams(layoutParams);
-
-            myView.addView(states[counter]);
         }
 
-
+        myView.setStates(states);
     }
 }

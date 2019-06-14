@@ -15,6 +15,7 @@ import android.widget.TextView;
 import static com.example.lynn.fourth.MainActivity.*;
 
 public class MyView extends RelativeLayout {
+    public StateView[] states;
 
     public MyView(Context context) {
         super(context);
@@ -92,6 +93,20 @@ public class MyView extends RelativeLayout {
         start.setLayoutParams(layoutParams);
 
         addView(start);
+    }
+
+    public void setStates(StateView[] states) {
+        if (this.states != null) {
+            for (int counter = 0; counter < states.length; counter++)
+                removeView(states[counter]);
+        }
+
+        this.states = states;
+
+        for (StateView stateView : states)
+            addView(stateView);
+
+        invalidate();
     }
 
     public void onDraw(Canvas canvas) {
