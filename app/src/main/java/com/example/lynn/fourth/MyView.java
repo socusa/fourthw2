@@ -117,8 +117,11 @@ public class MyView extends RelativeLayout {
 
     public void setStates(StateView[] states) {
         if (this.states != null) {
-            for (int counter = 0; counter < states.length; counter++)
+            for (int counter = 0; counter < states.length; counter++) {
+                states[counter].setVisibility(INVISIBLE);
+
                 removeView(states[counter]);
+            }
         }
 
         this.states = states;
